@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mobile Plans</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <div class="container mt-5">
+        <div class="row">
+            <div class=col-6>
+                <div class="form-group">
+                    <label>Sepal length</label>
+                    <input class="form-control" type="number" id="sepal_length" name="sepal_length" min="0" required />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Sepal width</label>
+                    <input class="form-control" type="number" id="sepal_width" name="sepal_width" min="0" required />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Petal length</label>
+                    <input class="form-control" type="number" id="petal_length" name="petal_length" min="0" required />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Petal width</label>
+                    <input class="form-control" type="number" id="petal_width" name="petal_width" min="0" required />
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <button class="btn btn-primary" onclick="getType()">Patikrinti rūšį</button>                         
+            </div>
+        </div>
+        <table id="main-table" class="table table-bordered text-center">
+            <thead id="theadId">
+                <tr>
+                    <th scope="col">Sepal length</th>
+                    <th scope="col">Sepal width</th>
+                    <th scope="col">Petal length</th>
+                    <th scope="col">Petal width</th>
+                    <th scope="col">Species</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyId">
+            </tbody>
+        </table> 
+        <script src='./main.js'></script>
+</body>
+
+</html>

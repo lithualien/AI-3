@@ -1,0 +1,15 @@
+.value-input {
+	width: 45px;
+}
+
+.updated-table-col {
+	display: none;
+}
+
+#total-value {
+	color: green;
+}
+
+.tr-background {
+	background-color: lightgreen;
+}
