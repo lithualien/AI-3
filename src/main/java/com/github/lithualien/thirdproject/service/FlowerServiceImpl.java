@@ -1,6 +1,6 @@
 package com.github.lithualien.thirdproject.service;
 
-import com.github.lithualien.thirdproject.dao.FlowerDao;
+import com.github.lithualien.thirdproject.dao.Dao;
 import com.github.lithualien.thirdproject.domain.Description;
 import com.github.lithualien.thirdproject.domain.Flower;
 import com.github.lithualien.thirdproject.domain.Range;
@@ -12,21 +12,21 @@ import java.util.*;
 @Service
 public class FlowerServiceImpl implements FlowerService {
 
-    private final FlowerDao flowerDao;
+    private final Dao<Flower> flowerDao;
 
 
-    public FlowerServiceImpl(FlowerDao flowerDao) {
+    public FlowerServiceImpl(Dao<Flower> flowerDao) {
         this.flowerDao = flowerDao;
     }
 
     @Override
     public List<Flower> getFlowers() {
-        return flowerDao.getFlowers();
+        return flowerDao.all();
     }
 
     @Override
     public Type findFlowerType(Flower flower) {
-        List<Flower> flowers = flowerDao.getFlowers();
+        List<Flower> flowers = flowerDao.all();
         List<Description> sepalLength = new ArrayList<>();
         List<Description> sepalWidth = new ArrayList<>();
         List<Description> petalLength = new ArrayList<>();
@@ -67,7 +67,7 @@ public class FlowerServiceImpl implements FlowerService {
 
     @Override
     public void saveFlower(Flower flower) {
-        flowerDao.saveFlower(flower);
+        flowerDao.save(flower);
     }
 
     private void copyDataToList(List<Flower> flowers, List<Description> sepalLength, List<Description> sepalWidth, List<Description> petalLength, List<Description> petalWidth) {

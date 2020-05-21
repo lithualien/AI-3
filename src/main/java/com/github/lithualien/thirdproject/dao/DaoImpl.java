@@ -11,13 +11,13 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Repository
-public class FlowerDaoImpl implements FlowerDao {
+public class DaoImpl implements Dao<Flower> {
 
     private static final String FILE = "static/data/data.csv";
     private static final String COMMA_DELIMITER = ",";
 
     @Override
-    public List<Flower> getFlowers() {
+    public List<Flower> all() {
         List<Flower> flowers = null;
 
         try (InputStream resource = new ClassPathResource(FILE).getInputStream()) {
@@ -34,7 +34,7 @@ public class FlowerDaoImpl implements FlowerDao {
     }
 
     @Override
-    public void saveFlower(Flower flower) {
+    public void save(Flower flower) {
         try (FileWriter fileWriter = new FileWriter(getFile(),true);
              CSVWriter writer = new CSVWriter(fileWriter)) {
             writer.writeNext(convertToStringArray(flower), false);
