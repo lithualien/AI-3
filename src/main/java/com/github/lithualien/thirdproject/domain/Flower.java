@@ -6,7 +6,7 @@ public class Flower {
     float sepalWidth;
     float petalLength;
     float petalWidth;
-    String specie;
+    private String specie;
 
     public Flower() {
     }

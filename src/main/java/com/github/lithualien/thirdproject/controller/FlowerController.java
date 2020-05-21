@@ -15,10 +15,9 @@ import java.util.List;
 @RequestMapping("/api")
 public class FlowerController {
 
-    private FlowerService flowerService;
+    private final FlowerService flowerService;
 
-    @Autowired
-    public void setFlowerService(FlowerService flowerService) {
+    public FlowerController(FlowerService flowerService) {
         this.flowerService = flowerService;
     }
 

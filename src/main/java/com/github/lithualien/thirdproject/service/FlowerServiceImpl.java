@@ -5,7 +5,6 @@ import com.github.lithualien.thirdproject.domain.Description;
 import com.github.lithualien.thirdproject.domain.Flower;
 import com.github.lithualien.thirdproject.domain.Range;
 import com.github.lithualien.thirdproject.domain.Type;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -13,10 +12,10 @@ import java.util.*;
 @Service
 public class FlowerServiceImpl implements FlowerService {
 
-    private FlowerDao flowerDao;
+    private final FlowerDao flowerDao;
 
-    @Autowired
-    public void setFlowerDao(FlowerDao flowerDao) {
+
+    public FlowerServiceImpl(FlowerDao flowerDao) {
         this.flowerDao = flowerDao;
     }
 

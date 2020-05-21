@@ -1,7 +1,8 @@
 package com.github.lithualien.thirdproject.domain;
 
 public class Type {
-    String type;
+
+    private String type;
 
     public Type() {
     }

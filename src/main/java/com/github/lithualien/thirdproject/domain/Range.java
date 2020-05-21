@@ -4,7 +4,7 @@ public class Range {
     float rangeStartingPoint;
     float rangeEndingPoint;
     int repeat;
-    String specie;
+    private String specie;
 
     public Range() {
     }

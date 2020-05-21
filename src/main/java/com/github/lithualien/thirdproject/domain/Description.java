@@ -1,8 +1,9 @@
 package com.github.lithualien.thirdproject.domain;
 
 public class Description {
+
     float size;
-    String specie;
+    private String specie;
 
     public Description() {
     }
